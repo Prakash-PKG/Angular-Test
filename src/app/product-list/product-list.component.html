@@ -1,0 +1,25 @@
+<h3>Product Data </h3>
+<table class="table table-bordered">
+    <tr class="table-info">
+      <th>ID</th>
+      <th>CODE</th>
+      <th>COST</th>
+      <th>DISCOUNT</th>
+      <th>GST</th>
+      <th colspan="2">OPERATIONS</th>
+    </tr>
+
+    <tr *ngFor="let pob of products">
+      <td>{{pob.prodId}}</td>
+      <td>{{pob.prodCode}}</td>
+      <td>{{pob.prodCost}}</td>
+      <td>{{pob.prodDiscount}}</td>
+      <td>{{pob.prodGst}}</td>
+      <td>
+        <button class="btn btn-warning" (click)="deleteProduct(pob.prodId)">DELETE</button> &nbsp;
+        <button class="btn btn-primary" (click)="editProduct(pob.prodId)">EDIT</button>
+      </td>
+    </tr>
+   
+</table>
+{{message}}

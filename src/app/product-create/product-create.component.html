@@ -1,0 +1,44 @@
+<h3>Product Register</h3>
+<form action="#" method="POST" (ngSubmit)="createProduct()">
+  <!-- Row#1 -->
+  <div class="row">
+    <div class="col-3">
+      <label for="prodCode">Product Code</label>
+    </div>
+    <div class="col-4">
+      <input type="text" [(ngModel)]="product.prodCode" id="prodCode" name="prodCode" class="form-control" />
+    </div>
+  </div>
+
+  <!-- Row#2 -->
+  <div class="row">
+    <div class="col-3">
+      <label for="prodCost">Product Cost</label>
+    </div>
+    <div class="col-4">
+      <input type="text" [(ngModel)]="product.prodCost" id="prodCost" name="prodCost" class="form-control" />
+    </div>
+  </div>
+
+  <!-- Row#3 -->
+  <div class="row">
+    <div class="col-3">
+      <label for="prodDiscount">Product Discount</label>
+    </div>
+    <div class="col-4">
+      <input type="text" [(ngModel)]="product.prodDiscount" id="prodDiscount" name="prodDiscount" class="form-control" />
+    </div>
+  </div>
+
+  <!-- Row#4 -->
+  <div class="row">
+    <div class="col-3">
+      <label for="prodGst">Product GST</label>
+    </div>
+    <div class="col-4">
+      <input type="text"  [(ngModel)]="product.prodGst" id="prodGst" name="prodGst" class="form-control" />
+    </div>
+  </div>
+  <input type="submit" value="Add Product" class="btn btn-primary"/>
+</form>
+{{message}}
